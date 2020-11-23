@@ -7,18 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D79E324256B616D0049D4E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D79E322256B616D0049D4E5 /* Main.storyboard */; };
+		3D79E326256B61990049D4E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79E325256B61990049D4E5 /* ViewController.swift */; };
+		3D79E32A256B61E20049D4E5 /* CeldaAlbumesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79E329256B61E20049D4E5 /* CeldaAlbumesController.swift */; };
+		3D79E32C256B61EC0049D4E5 /* DetallesAlbumesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79E32B256B61EC0049D4E5 /* DetallesAlbumesController.swift */; };
+		3D79E330256B63680049D4E5 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79E32F256B63680049D4E5 /* Album.swift */; };
+		3D79E336256B92000049D4E5 /* ArtistasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79E335256B92000049D4E5 /* ArtistasViewController.swift */; };
+		3D79E338256B92110049D4E5 /* Artista.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79E337256B92110049D4E5 /* Artista.swift */; };
+		3D79E33A256B9A3F0049D4E5 /* CeldaArtistasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79E339256B9A3F0049D4E5 /* CeldaArtistasController.swift */; };
+		3D79E33C256B9A5E0049D4E5 /* DetallesArtistasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79E33B256B9A5E0049D4E5 /* DetallesArtistasController.swift */; };
 		3DEAB1EC256B5DC70040D149 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEAB1EB256B5DC70040D149 /* AppDelegate.swift */; };
-		3DEAB1EE256B5DC70040D149 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEAB1ED256B5DC70040D149 /* ViewController.swift */; };
-		3DEAB1F1256B5DC70040D149 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DEAB1EF256B5DC70040D149 /* Main.storyboard */; };
 		3DEAB1F3256B5DFC0040D149 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DEAB1F2256B5DFC0040D149 /* Assets.xcassets */; };
 		3DEAB1F6256B5DFC0040D149 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DEAB1F4256B5DFC0040D149 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D79E323256B616D0049D4E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../PDS/ProyectoSemestralMiguelRubén/ProyectoSemestralMiguelRubén/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		3D79E325256B61990049D4E5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../PDS/ProyectoSemestralMiguelRubén/ProyectoSemestralMiguelRubén/ViewController.swift"; sourceTree = "<group>"; };
+		3D79E329256B61E20049D4E5 /* CeldaAlbumesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CeldaAlbumesController.swift; path = "../../PDS/ProyectoSemestralMiguelRubén/ProyectoSemestralMiguelRubén/CeldaAlbumesController.swift"; sourceTree = "<group>"; };
+		3D79E32B256B61EC0049D4E5 /* DetallesAlbumesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetallesAlbumesController.swift; path = "../../PDS/ProyectoSemestralMiguelRubén/ProyectoSemestralMiguelRubén/DetallesAlbumesController.swift"; sourceTree = "<group>"; };
+		3D79E32F256B63680049D4E5 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		3D79E335256B92000049D4E5 /* ArtistasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistasViewController.swift; sourceTree = "<group>"; };
+		3D79E337256B92110049D4E5 /* Artista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artista.swift; sourceTree = "<group>"; };
+		3D79E339256B9A3F0049D4E5 /* CeldaArtistasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaArtistasController.swift; sourceTree = "<group>"; };
+		3D79E33B256B9A5E0049D4E5 /* DetallesArtistasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallesArtistasController.swift; sourceTree = "<group>"; };
 		3DEAB1E8256B5DC70040D149 /* ProyectoSemestralMiguelRuben.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoSemestralMiguelRuben.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DEAB1EB256B5DC70040D149 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3DEAB1ED256B5DC70040D149 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3DEAB1F0256B5DC70040D149 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DEAB1F2256B5DFC0040D149 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DEAB1F5256B5DFC0040D149 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DEAB1F7256B5DFC0040D149 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,12 +68,19 @@
 		3DEAB1EA256B5DC70040D149 /* ProyectoSemestralMiguelRuben */ = {
 			isa = PBXGroup;
 			children = (
+				3D79E325256B61990049D4E5 /* ViewController.swift */,
+				3D79E335256B92000049D4E5 /* ArtistasViewController.swift */,
+				3D79E329256B61E20049D4E5 /* CeldaAlbumesController.swift */,
+				3D79E339256B9A3F0049D4E5 /* CeldaArtistasController.swift */,
+				3D79E32B256B61EC0049D4E5 /* DetallesAlbumesController.swift */,
+				3D79E33B256B9A5E0049D4E5 /* DetallesArtistasController.swift */,
 				3DEAB1EB256B5DC70040D149 /* AppDelegate.swift */,
-				3DEAB1ED256B5DC70040D149 /* ViewController.swift */,
-				3DEAB1EF256B5DC70040D149 /* Main.storyboard */,
 				3DEAB1F2256B5DFC0040D149 /* Assets.xcassets */,
+				3D79E322256B616D0049D4E5 /* Main.storyboard */,
 				3DEAB1F4256B5DFC0040D149 /* LaunchScreen.storyboard */,
 				3DEAB1F7256B5DFC0040D149 /* Info.plist */,
+				3D79E32F256B63680049D4E5 /* Album.swift */,
+				3D79E337256B92110049D4E5 /* Artista.swift */,
 			);
 			path = ProyectoSemestralMiguelRuben;
 			sourceTree = "<group>";
@@ -122,9 +143,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D79E324256B616D0049D4E5 /* Main.storyboard in Resources */,
 				3DEAB1F6256B5DFC0040D149 /* LaunchScreen.storyboard in Resources */,
 				3DEAB1F3256B5DFC0040D149 /* Assets.xcassets in Resources */,
-				3DEAB1F1256B5DC70040D149 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,18 +156,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DEAB1EE256B5DC70040D149 /* ViewController.swift in Sources */,
+				3D79E33A256B9A3F0049D4E5 /* CeldaArtistasController.swift in Sources */,
+				3D79E33C256B9A5E0049D4E5 /* DetallesArtistasController.swift in Sources */,
+				3D79E338256B92110049D4E5 /* Artista.swift in Sources */,
+				3D79E326256B61990049D4E5 /* ViewController.swift in Sources */,
+				3D79E32C256B61EC0049D4E5 /* DetallesAlbumesController.swift in Sources */,
+				3D79E32A256B61E20049D4E5 /* CeldaAlbumesController.swift in Sources */,
 				3DEAB1EC256B5DC70040D149 /* AppDelegate.swift in Sources */,
+				3D79E330256B63680049D4E5 /* Album.swift in Sources */,
+				3D79E336256B92000049D4E5 /* ArtistasViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3DEAB1EF256B5DC70040D149 /* Main.storyboard */ = {
+		3D79E322256B616D0049D4E5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3DEAB1F0256B5DC70040D149 /* Base */,
+				3D79E323256B616D0049D4E5 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
