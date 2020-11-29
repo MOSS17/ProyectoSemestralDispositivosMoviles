@@ -1,24 +1,595 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZmT-y1-cr9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="FrontPageNeue.otf">
+            <string>FrontPageNeue</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Álbumes perrones-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProyectoSemestralMiguelRuben" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wO1-aT-cE3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ccl-ms-h1F"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P7g-vX-G2a" userLabel="Tabla de albumes">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" red="1" green="0.51705831290000004" blue="0.98536628479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.64720812182741116" green="0.33707235000380842" blue="0.64326567830347581" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaAlbum" rowHeight="147" id="UAJ-fg-sgF" userLabel="Celda albumes" customClass="CeldaAlbumesController" customModule="ProyectoSemestralMiguelRuben" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="147"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UAJ-fg-sgF" id="Rrb-G7-rxl">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6se-sw-AII" userLabel="Raíz album">
+                                                    <rect key="frame" x="20" y="11" width="374" height="125"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del álbum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHI-YQ-LJL">
+                                                            <rect key="frame" x="8" y="27" width="250" height="18"/>
+                                                            <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51f-LR-sTS">
+                                                            <rect key="frame" x="8" y="8" width="37.5" height="18"/>
+                                                            <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Año de publicación:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxu-O7-vBD">
+                                                            <rect key="frame" x="8" y="50" width="115" height="18"/>
+                                                            <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del artista" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibh-x2-Rpv">
+                                                            <rect key="frame" x="8" y="111" width="250" height="18"/>
+                                                            <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artista:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yjp-Nr-bBc">
+                                                            <rect key="frame" x="8" y="92" width="43" height="18"/>
+                                                            <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0cY-94-nCA" userLabel="Imagen álbum">
+                                                            <rect key="frame" x="266" y="12.5" width="100" height="100"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="100" id="cw1-Qd-5Ql"/>
+                                                                <constraint firstAttribute="width" constant="100" id="muS-zh-UxN"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Año de publicación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Onh-ee-3GI">
+                                                            <rect key="frame" x="8" y="69" width="111.5" height="18"/>
+                                                            <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="Yjp-Nr-bBc" firstAttribute="leading" secondItem="6se-sw-AII" secondAttribute="leading" constant="8" id="09q-Q6-sPN"/>
+                                                        <constraint firstItem="fHI-YQ-LJL" firstAttribute="leading" secondItem="6se-sw-AII" secondAttribute="leading" constant="8" id="2oD-be-m6d"/>
+                                                        <constraint firstItem="0cY-94-nCA" firstAttribute="leading" secondItem="fHI-YQ-LJL" secondAttribute="trailing" constant="8" id="5PX-IG-IhC"/>
+                                                        <constraint firstItem="51f-LR-sTS" firstAttribute="top" secondItem="6se-sw-AII" secondAttribute="top" constant="8" id="AWR-Jk-zx3"/>
+                                                        <constraint firstItem="Yjp-Nr-bBc" firstAttribute="top" secondItem="Onh-ee-3GI" secondAttribute="bottom" constant="5" id="BlV-3M-zKe"/>
+                                                        <constraint firstItem="Onh-ee-3GI" firstAttribute="leading" secondItem="6se-sw-AII" secondAttribute="leading" constant="8" id="Eud-ch-e31"/>
+                                                        <constraint firstItem="Dxu-O7-vBD" firstAttribute="leading" secondItem="6se-sw-AII" secondAttribute="leading" constant="8" id="KR8-BA-w6g"/>
+                                                        <constraint firstItem="fHI-YQ-LJL" firstAttribute="top" secondItem="51f-LR-sTS" secondAttribute="bottom" constant="1" id="MHy-Cc-Sbg"/>
+                                                        <constraint firstAttribute="trailing" secondItem="0cY-94-nCA" secondAttribute="trailing" constant="8" id="MYv-15-KGo"/>
+                                                        <constraint firstItem="ibh-x2-Rpv" firstAttribute="leading" secondItem="6se-sw-AII" secondAttribute="leading" constant="8" id="bnN-p4-P3D"/>
+                                                        <constraint firstItem="Dxu-O7-vBD" firstAttribute="top" secondItem="fHI-YQ-LJL" secondAttribute="bottom" constant="5" id="nSP-rS-ZHe"/>
+                                                        <constraint firstItem="0cY-94-nCA" firstAttribute="leading" secondItem="ibh-x2-Rpv" secondAttribute="trailing" constant="8" id="r6C-t2-EU1"/>
+                                                        <constraint firstAttribute="bottom" secondItem="0cY-94-nCA" secondAttribute="bottom" constant="12.5" id="rIr-FI-ucW"/>
+                                                        <constraint firstItem="Onh-ee-3GI" firstAttribute="top" secondItem="Dxu-O7-vBD" secondAttribute="bottom" constant="1" id="s5u-iN-6jy"/>
+                                                        <constraint firstItem="51f-LR-sTS" firstAttribute="leading" secondItem="6se-sw-AII" secondAttribute="leading" constant="8" id="w85-48-atT"/>
+                                                        <constraint firstItem="ibh-x2-Rpv" firstAttribute="top" secondItem="Yjp-Nr-bBc" secondAttribute="bottom" constant="1" id="xpg-hD-6NL"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6se-sw-AII" firstAttribute="trailing" secondItem="Rrb-G7-rxl" secondAttribute="trailingMargin" id="50e-6l-1kZ"/>
+                                                <constraint firstItem="6se-sw-AII" firstAttribute="leading" secondItem="Rrb-G7-rxl" secondAttribute="leadingMargin" id="TxS-Xa-Ocr"/>
+                                                <constraint firstItem="6se-sw-AII" firstAttribute="bottom" secondItem="Rrb-G7-rxl" secondAttribute="bottomMargin" id="XBj-ld-tSH"/>
+                                                <constraint firstItem="6se-sw-AII" firstAttribute="top" secondItem="Rrb-G7-rxl" secondAttribute="topMargin" id="fPs-zj-dNa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.58393931031523616" blue="0.96921851744459797" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="imgAlbum" destination="0cY-94-nCA" id="c8n-c1-djb"/>
+                                            <outlet property="lblAlbum" destination="fHI-YQ-LJL" id="kbX-cP-4fg"/>
+                                            <outlet property="lblArtista" destination="ibh-x2-Rpv" id="sNn-Lg-HoN"/>
+                                            <outlet property="lblFecha" destination="Onh-ee-3GI" id="mFK-P9-4T4"/>
+                                            <segue destination="FWB-4f-eQK" kind="show" id="a5M-Lb-iXU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="o9T-Wc-0R9"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vAm-PU-naO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="P7g-vX-G2a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="25L-Wp-Cmm"/>
+                            <constraint firstAttribute="bottom" secondItem="P7g-vX-G2a" secondAttribute="bottom" id="drh-Vv-3dp"/>
+                            <constraint firstItem="P7g-vX-G2a" firstAttribute="top" secondItem="wO1-aT-cE3" secondAttribute="bottom" id="frm-19-hUn"/>
+                            <constraint firstItem="P7g-vX-G2a" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="lxe-lc-Oa2"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Álbumes perrones" id="fWt-bd-g9s"/>
+                    <connections>
+                        <outlet property="tvAlbumes" destination="P7g-vX-G2a" id="g9o-Yz-HnU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1774" y="-202"/>
+        </scene>
+        <!--Álbumes-->
+        <scene sceneID="5Mi-eX-2E5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wpz-Jm-aKo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Álbumes" image="Album" id="lb6-f3-wNK"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K0w-c9-ZWq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.83825832605361938" green="0.42178821563720703" blue="0.6981080174446106" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Coolvetica-Regular" family="Coolvetica" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2ym-HZ-TkA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b3S-rf-Yfz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903" y="-202"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Y7Z-oS-szY">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ZmT-y1-cr9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HYT-Pn-Knj">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.78039215689999997" green="0.24745853462368078" blue="0.59540785862372136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.51705831290000004" blue="0.98536628479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Wpz-Jm-aKo" kind="relationship" relationship="viewControllers" id="IFj-Ln-XpN"/>
+                        <segue destination="kOU-5V-823" kind="relationship" relationship="viewControllers" id="1kM-oK-Z5K"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aS4-65-3gY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+        <!--Artistas perrones-->
+        <scene sceneID="Zpr-c3-DgL">
+            <objects>
+                <viewController id="6YI-zT-Z1u" customClass="ArtistasViewController" customModule="ProyectoSemestralMiguelRuben" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hIy-32-p1h"/>
+                        <viewControllerLayoutGuide type="bottom" id="ygJ-ze-es3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k5u-Cz-rV1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MTe-WH-XgL" userLabel="Tabla de artistas">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" red="1" green="0.51705831290000004" blue="0.98536628479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.64720812179999998" green="0.33707235000000002" blue="0.64326567830000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaArtista" rowHeight="147" id="bRk-vh-JkW" userLabel="Celda albumes" customClass="CeldaArtistasController" customModule="ProyectoSemestralMiguelRuben" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="147"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bRk-vh-JkW" id="7h3-b4-dsO" userLabel="Raíz artista">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre artistico:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kab-Kh-NYB">
+                                                    <rect key="frame" x="20" y="11" width="104" height="18"/>
+                                                    <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre artistico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKa-l5-Ek2">
+                                                    <rect key="frame" x="20" y="31" width="266" height="18"/>
+                                                    <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre real:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UU-WM-Eqs">
+                                                    <rect key="frame" x="20" y="55" width="76" height="18"/>
+                                                    <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre real" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FP9-iu-Ch3">
+                                                    <rect key="frame" x="20" y="75" width="266" height="18"/>
+                                                    <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nacionalidad:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJL-84-Wan">
+                                                    <rect key="frame" x="20" y="101" width="81" height="18"/>
+                                                    <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nacionalidad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kH2-DF-98r">
+                                                    <rect key="frame" x="20" y="121" width="266" height="18"/>
+                                                    <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3sX-Pm-Lxk">
+                                                    <rect key="frame" x="294" y="23.5" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="00c-Ql-Bsm"/>
+                                                        <constraint firstAttribute="width" constant="100" id="gft-YG-Mj9"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.51705831290000004" blue="0.98536628479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="kab-Kh-NYB" firstAttribute="leading" secondItem="7h3-b4-dsO" secondAttribute="leadingMargin" id="4AY-pw-loh"/>
+                                                <constraint firstItem="kH2-DF-98r" firstAttribute="leading" secondItem="7h3-b4-dsO" secondAttribute="leadingMargin" id="4Lv-Ri-cgQ"/>
+                                                <constraint firstItem="IJL-84-Wan" firstAttribute="leading" secondItem="7h3-b4-dsO" secondAttribute="leadingMargin" id="6go-tk-wgG"/>
+                                                <constraint firstItem="3sX-Pm-Lxk" firstAttribute="leading" secondItem="FP9-iu-Ch3" secondAttribute="trailing" constant="8" id="6wG-BD-kya"/>
+                                                <constraint firstItem="kab-Kh-NYB" firstAttribute="top" secondItem="7h3-b4-dsO" secondAttribute="topMargin" id="ATg-De-FLg"/>
+                                                <constraint firstItem="3sX-Pm-Lxk" firstAttribute="centerY" secondItem="7h3-b4-dsO" secondAttribute="centerY" id="ClT-XH-1wD"/>
+                                                <constraint firstItem="kH2-DF-98r" firstAttribute="top" secondItem="IJL-84-Wan" secondAttribute="bottom" constant="2" id="Jxt-0z-eRI"/>
+                                                <constraint firstItem="3sX-Pm-Lxk" firstAttribute="leading" secondItem="kH2-DF-98r" secondAttribute="trailing" constant="8" id="Lzt-RX-nxd"/>
+                                                <constraint firstItem="FP9-iu-Ch3" firstAttribute="leading" secondItem="7h3-b4-dsO" secondAttribute="leadingMargin" id="ZMP-xq-sGa"/>
+                                                <constraint firstItem="2UU-WM-Eqs" firstAttribute="top" secondItem="OKa-l5-Ek2" secondAttribute="bottom" constant="6" id="bTJ-mh-Dpt"/>
+                                                <constraint firstItem="OKa-l5-Ek2" firstAttribute="top" secondItem="kab-Kh-NYB" secondAttribute="bottom" constant="2" id="dHm-Yb-BrH"/>
+                                                <constraint firstItem="OKa-l5-Ek2" firstAttribute="leading" secondItem="7h3-b4-dsO" secondAttribute="leadingMargin" id="dfY-tt-hc6"/>
+                                                <constraint firstItem="3sX-Pm-Lxk" firstAttribute="trailing" secondItem="7h3-b4-dsO" secondAttribute="trailingMargin" id="eLO-lh-2cj"/>
+                                                <constraint firstItem="IJL-84-Wan" firstAttribute="top" secondItem="FP9-iu-Ch3" secondAttribute="bottom" constant="8" id="qFd-yQ-1Jw"/>
+                                                <constraint firstItem="FP9-iu-Ch3" firstAttribute="top" secondItem="2UU-WM-Eqs" secondAttribute="bottom" constant="2" id="sDP-DX-dPZ"/>
+                                                <constraint firstItem="3sX-Pm-Lxk" firstAttribute="leading" secondItem="OKa-l5-Ek2" secondAttribute="trailing" constant="8" id="uPi-bi-ZgH"/>
+                                                <constraint firstItem="2UU-WM-Eqs" firstAttribute="leading" secondItem="7h3-b4-dsO" secondAttribute="leadingMargin" id="ylk-gy-YLU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.57130002975463867" blue="0.97657495737075806" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="imgArtista" destination="3sX-Pm-Lxk" id="Vni-b1-hRw"/>
+                                            <outlet property="lblNacionalidad" destination="kH2-DF-98r" id="pr9-KI-3oe"/>
+                                            <outlet property="lblNombreArtistico" destination="OKa-l5-Ek2" id="ffG-j6-UBm"/>
+                                            <outlet property="lblNombreReal" destination="FP9-iu-Ch3" id="CLx-Zx-KqZ"/>
+                                            <segue destination="9Ll-rH-0w2" kind="show" id="3Iv-V4-xEV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="6YI-zT-Z1u" id="2Hc-bl-KhO"/>
+                                    <outlet property="delegate" destination="6YI-zT-Z1u" id="yTL-UP-Ii4"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MTe-WH-XgL" firstAttribute="top" secondItem="hIy-32-p1h" secondAttribute="bottom" id="6xz-5l-oOp"/>
+                            <constraint firstItem="MTe-WH-XgL" firstAttribute="leading" secondItem="k5u-Cz-rV1" secondAttribute="leading" id="Qw4-Xd-6mh"/>
+                            <constraint firstItem="ygJ-ze-es3" firstAttribute="top" secondItem="MTe-WH-XgL" secondAttribute="bottom" id="WWf-nr-bbD"/>
+                            <constraint firstAttribute="trailing" secondItem="MTe-WH-XgL" secondAttribute="trailing" id="bkU-zP-ehp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Artistas perrones" id="tFW-UN-cgf"/>
+                    <connections>
+                        <outlet property="tvArtistas" destination="MTe-WH-XgL" id="aM5-vV-uH3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VA4-kQ-pj2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1773.913043478261" y="493.52678571428567"/>
+        </scene>
+        <!--Artistas-->
+        <scene sceneID="KYX-IR-OdK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kOU-5V-823" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Artistas" image="Cantante" id="uub-B6-xwN"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Wc-8Z-iJ7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.81122809648513794" green="0.34084880352020264" blue="0.65107810497283936" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Coolvetica-Regular" family="Coolvetica" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6YI-zT-Z1u" kind="relationship" relationship="rootViewController" id="LKL-ds-N0Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pnd-Vk-eG2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910.14492753623199" y="493.52678571428567"/>
+        </scene>
+        <!--Álbumes perrones-->
+        <scene sceneID="OeE-YS-xXA">
+            <objects>
+                <viewController id="FWB-4f-eQK" customClass="DetallesAlbumesController" customModule="ProyectoSemestralMiguelRuben" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6eE-CI-tc8"/>
+                        <viewControllerLayoutGuide type="bottom" id="hpR-h1-d9H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rAm-5w-OYk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A8Y-Lr-OFZ">
+                                <rect key="frame" x="40.5" y="116" width="333" height="213"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="333" id="t9Z-QM-Du5"/>
+                                    <constraint firstAttribute="height" constant="213" id="tcU-Oi-Ee0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVo-WB-qD8">
+                                <rect key="frame" x="40" y="350" width="44" height="21"/>
+                                <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del álbum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffy-Pk-exa">
+                                <rect key="frame" x="97" y="350" width="164" height="27.5"/>
+                                <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artista:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taj-oO-oLo">
+                                <rect key="frame" x="40" y="384" width="51" height="21"/>
+                                <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del álbum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tI-Ep-1Ay">
+                                <rect key="frame" x="106" y="384" width="164" height="27.5"/>
+                                <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFl-oi-nbY">
+                                <rect key="frame" x="40" y="418" width="47" height="21"/>
+                                <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha de publicación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiD-za-Ccz">
+                                <rect key="frame" x="106" y="418" width="193" height="27.5"/>
+                                <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genero:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iet-23-3Jn">
+                                <rect key="frame" x="40" y="452" width="54" height="21"/>
+                                <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genero" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wl-R7-eoi">
+                                <rect key="frame" x="106" y="452" width="65" height="27.5"/>
+                                <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disquera:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSm-UA-UeI">
+                                <rect key="frame" x="40" y="486" width="66.5" height="21"/>
+                                <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disquera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RD-kz-I7D">
+                                <rect key="frame" x="120" y="486" width="81" height="27.5"/>
+                                <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="edE-lK-Tge">
+                                <rect key="frame" x="70" y="534" width="274" height="146"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="146" id="Fcp-Cm-hkf"/>
+                                    <constraint firstAttribute="width" constant="274" id="Vo9-4O-0hE"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.7333044998287167" blue="0.9732087773390119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dFl-oi-nbY" firstAttribute="leading" secondItem="rAm-5w-OYk" secondAttribute="leadingMargin" constant="20" id="0Rx-Xw-CRC"/>
+                            <constraint firstItem="edE-lK-Tge" firstAttribute="centerX" secondItem="rAm-5w-OYk" secondAttribute="centerX" id="1DM-8I-e19"/>
+                            <constraint firstItem="taj-oO-oLo" firstAttribute="top" secondItem="zVo-WB-qD8" secondAttribute="bottom" constant="13" id="4b0-X3-ijb"/>
+                            <constraint firstItem="Iet-23-3Jn" firstAttribute="leading" secondItem="rAm-5w-OYk" secondAttribute="leadingMargin" constant="20" id="6io-fK-Hwb"/>
+                            <constraint firstItem="4RD-kz-I7D" firstAttribute="leading" secondItem="CSm-UA-UeI" secondAttribute="trailing" constant="13.5" id="6jD-hL-mkR"/>
+                            <constraint firstItem="3tI-Ep-1Ay" firstAttribute="leading" secondItem="taj-oO-oLo" secondAttribute="trailing" constant="15" id="6xY-CI-3hy"/>
+                            <constraint firstItem="taj-oO-oLo" firstAttribute="leading" secondItem="rAm-5w-OYk" secondAttribute="leadingMargin" constant="20" id="Bhl-xd-gKl"/>
+                            <constraint firstItem="4RD-kz-I7D" firstAttribute="top" secondItem="0Wl-R7-eoi" secondAttribute="bottom" constant="6.5" id="DrE-Xh-jOr"/>
+                            <constraint firstItem="3tI-Ep-1Ay" firstAttribute="top" secondItem="ffy-Pk-exa" secondAttribute="bottom" constant="6.5" id="Gwa-Cw-8nX"/>
+                            <constraint firstItem="ffy-Pk-exa" firstAttribute="leading" secondItem="zVo-WB-qD8" secondAttribute="trailing" constant="13" id="HnT-wa-VJN"/>
+                            <constraint firstItem="edE-lK-Tge" firstAttribute="top" secondItem="4RD-kz-I7D" secondAttribute="bottom" constant="20.5" id="IhS-j2-BtA"/>
+                            <constraint firstItem="A8Y-Lr-OFZ" firstAttribute="centerX" secondItem="rAm-5w-OYk" secondAttribute="centerX" id="JB9-dC-6gv"/>
+                            <constraint firstItem="zVo-WB-qD8" firstAttribute="leading" secondItem="rAm-5w-OYk" secondAttribute="leadingMargin" constant="20" id="N9B-Ft-mq4"/>
+                            <constraint firstItem="zVo-WB-qD8" firstAttribute="top" secondItem="A8Y-Lr-OFZ" secondAttribute="bottom" constant="21" id="e7d-up-fpv"/>
+                            <constraint firstItem="BiD-za-Ccz" firstAttribute="leading" secondItem="dFl-oi-nbY" secondAttribute="trailing" constant="19" id="end-6o-E9Z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A8Y-Lr-OFZ" secondAttribute="trailing" constant="20.5" id="fLu-HJ-bmz"/>
+                            <constraint firstItem="A8Y-Lr-OFZ" firstAttribute="top" secondItem="6eE-CI-tc8" secondAttribute="bottom" constant="28" id="gZf-P0-kNA"/>
+                            <constraint firstItem="dFl-oi-nbY" firstAttribute="top" secondItem="taj-oO-oLo" secondAttribute="bottom" constant="13" id="gfI-P6-QIu"/>
+                            <constraint firstItem="Iet-23-3Jn" firstAttribute="top" secondItem="dFl-oi-nbY" secondAttribute="bottom" constant="13" id="h90-gF-O3d"/>
+                            <constraint firstItem="0Wl-R7-eoi" firstAttribute="top" secondItem="BiD-za-Ccz" secondAttribute="bottom" constant="6.5" id="hDr-qD-uCM"/>
+                            <constraint firstItem="CSm-UA-UeI" firstAttribute="top" secondItem="0Wl-R7-eoi" secondAttribute="bottom" constant="6.5" id="iPq-bo-ESg"/>
+                            <constraint firstItem="BiD-za-Ccz" firstAttribute="top" secondItem="3tI-Ep-1Ay" secondAttribute="bottom" constant="6.5" id="nFw-qY-E4L"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="edE-lK-Tge" secondAttribute="trailing" constant="50" id="nT9-fk-Hn2"/>
+                            <constraint firstItem="0Wl-R7-eoi" firstAttribute="leading" secondItem="Iet-23-3Jn" secondAttribute="trailing" constant="12" id="oWi-bm-bwP"/>
+                            <constraint firstItem="CSm-UA-UeI" firstAttribute="leading" secondItem="rAm-5w-OYk" secondAttribute="leadingMargin" constant="20" id="y51-eO-Z90"/>
+                            <constraint firstItem="ffy-Pk-exa" firstAttribute="top" secondItem="A8Y-Lr-OFZ" secondAttribute="bottom" constant="21" id="zuc-7N-VKz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Álbumes perrones" id="KoD-YY-j87"/>
+                    <connections>
+                        <outlet property="imgAlbum" destination="A8Y-Lr-OFZ" id="ztk-PJ-4Hh"/>
+                        <outlet property="imgArtista" destination="edE-lK-Tge" id="tTV-HG-4xd"/>
+                        <outlet property="lblAlbum" destination="ffy-Pk-exa" id="uGC-dI-Y4z"/>
+                        <outlet property="lblArtista" destination="3tI-Ep-1Ay" id="2Zu-HO-OPF"/>
+                        <outlet property="lblDisquera" destination="4RD-kz-I7D" id="ES0-nF-aFf"/>
+                        <outlet property="lblFecha" destination="BiD-za-Ccz" id="s4p-h9-QNZ"/>
+                        <outlet property="lblGenero" destination="0Wl-R7-eoi" id="oas-nX-jYp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Huu-pZ-mrn" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2630.434782608696" y="-202.23214285714286"/>
+        </scene>
+        <!--Álbumes perrones-->
+        <scene sceneID="Bzd-oV-pVH">
+            <objects>
+                <viewController id="9Ll-rH-0w2" customClass="DetallesArtistasController" customModule="ProyectoSemestralMiguelRuben" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ysd-xp-c93"/>
+                        <viewControllerLayoutGuide type="bottom" id="kCj-Zh-n4i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AHn-zB-tvB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1lp-UY-ePx">
+                                <rect key="frame" x="41" y="123" width="333" height="213"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="333" id="Jg6-yh-ts7"/>
+                                    <constraint firstAttribute="height" constant="213" id="sGr-Ua-Zic"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre A:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfC-eT-rjv">
+                                <rect key="frame" x="41" y="357" width="70" height="21"/>
+                                <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre Artistico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ru-kl-vcM">
+                                <rect key="frame" x="116" y="354" width="153" height="28"/>
+                                <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre R:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0JM-n9-lfr">
+                                <rect key="frame" x="41" y="391" width="71" height="21"/>
+                                <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del álbum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaV-lf-GOw">
+                                <rect key="frame" x="116" y="388" width="164" height="27.5"/>
+                                <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nacionalidad:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVZ-Q3-qmz">
+                                <rect key="frame" x="41" y="425" width="95" height="21"/>
+                                <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nacionalidad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BlE-67-jrS">
+                                <rect key="frame" x="144" y="421" width="119" height="28"/>
+                                <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nacimiento:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzA-Mp-2li">
+                                <rect key="frame" x="41" y="459" width="84" height="21"/>
+                                <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nacimiento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9V-34-xd3">
+                                <rect key="frame" x="133" y="456" width="105" height="28"/>
+                                <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ciudad:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0R-yN-or0">
+                                <rect key="frame" x="41" y="493" width="52" height="21"/>
+                                <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ciudad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7e-f7-HxJ">
+                                <rect key="frame" x="101" y="490" width="63" height="28"/>
+                                <fontDescription key="fontDescription" name="FrontPageNeue" family="Front Page Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.7265738844871521" blue="0.97800439596176147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="M7e-f7-HxJ" firstAttribute="top" secondItem="L9V-34-xd3" secondAttribute="bottom" constant="6" id="1SF-fe-2qr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1lp-UY-ePx" secondAttribute="trailing" constant="20" id="2l4-sV-577"/>
+                            <constraint firstItem="M7e-f7-HxJ" firstAttribute="leading" secondItem="O0R-yN-or0" secondAttribute="trailing" constant="8" id="7Vq-nc-k3q"/>
+                            <constraint firstItem="SVZ-Q3-qmz" firstAttribute="leading" secondItem="AHn-zB-tvB" secondAttribute="leadingMargin" constant="21" id="A6k-Bm-XXv"/>
+                            <constraint firstItem="RaV-lf-GOw" firstAttribute="leading" secondItem="0JM-n9-lfr" secondAttribute="trailing" constant="4" id="FyM-CV-Qff"/>
+                            <constraint firstItem="L9V-34-xd3" firstAttribute="leading" secondItem="PzA-Mp-2li" secondAttribute="trailing" constant="8" id="HuN-au-dWy"/>
+                            <constraint firstItem="0JM-n9-lfr" firstAttribute="top" secondItem="ZfC-eT-rjv" secondAttribute="bottom" constant="13" id="Idk-m1-WGB"/>
+                            <constraint firstItem="PzA-Mp-2li" firstAttribute="top" secondItem="SVZ-Q3-qmz" secondAttribute="bottom" constant="13" id="T84-JP-caX"/>
+                            <constraint firstItem="7Ru-kl-vcM" firstAttribute="leading" secondItem="ZfC-eT-rjv" secondAttribute="trailing" constant="5" id="U5z-F7-LKH"/>
+                            <constraint firstItem="1lp-UY-ePx" firstAttribute="top" secondItem="Ysd-xp-c93" secondAttribute="bottom" constant="35" id="U8I-dB-WpS"/>
+                            <constraint firstItem="ZfC-eT-rjv" firstAttribute="leading" secondItem="AHn-zB-tvB" secondAttribute="leadingMargin" constant="21" id="Uej-eB-ZTp"/>
+                            <constraint firstItem="BlE-67-jrS" firstAttribute="leading" secondItem="SVZ-Q3-qmz" secondAttribute="trailing" constant="8" id="aJC-aP-lOq"/>
+                            <constraint firstItem="L9V-34-xd3" firstAttribute="top" secondItem="BlE-67-jrS" secondAttribute="bottom" constant="7" id="cL4-kG-3qA"/>
+                            <constraint firstItem="O0R-yN-or0" firstAttribute="leading" secondItem="AHn-zB-tvB" secondAttribute="leadingMargin" constant="21" id="cSo-dh-3AN"/>
+                            <constraint firstItem="BlE-67-jrS" firstAttribute="top" secondItem="RaV-lf-GOw" secondAttribute="bottom" constant="5.5" id="eSW-1u-ul9"/>
+                            <constraint firstItem="PzA-Mp-2li" firstAttribute="leading" secondItem="AHn-zB-tvB" secondAttribute="leadingMargin" constant="21" id="h86-z3-Uqt"/>
+                            <constraint firstItem="RaV-lf-GOw" firstAttribute="top" secondItem="7Ru-kl-vcM" secondAttribute="bottom" constant="6" id="iZ1-6n-ffD"/>
+                            <constraint firstItem="0JM-n9-lfr" firstAttribute="leading" secondItem="AHn-zB-tvB" secondAttribute="leadingMargin" constant="21" id="k18-Km-P6A"/>
+                            <constraint firstItem="SVZ-Q3-qmz" firstAttribute="top" secondItem="RaV-lf-GOw" secondAttribute="bottom" constant="9.5" id="nFb-sH-JnB"/>
+                            <constraint firstItem="7Ru-kl-vcM" firstAttribute="top" secondItem="1lp-UY-ePx" secondAttribute="bottom" constant="18" id="nRv-Og-gF6"/>
+                            <constraint firstItem="O0R-yN-or0" firstAttribute="top" secondItem="PzA-Mp-2li" secondAttribute="bottom" constant="13" id="pjJ-fH-rDS"/>
+                            <constraint firstItem="ZfC-eT-rjv" firstAttribute="top" secondItem="1lp-UY-ePx" secondAttribute="bottom" constant="21" id="qmR-50-zqE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Álbumes perrones" id="cQ1-7a-gsC"/>
+                    <connections>
+                        <outlet property="imgArtista2" destination="1lp-UY-ePx" id="6gq-Zs-Qqc"/>
+                        <outlet property="lblFechaNacimiento" destination="L9V-34-xd3" id="lPH-fr-4f8"/>
+                        <outlet property="lblLugarNacimiento" destination="M7e-f7-HxJ" id="ndR-jL-JVe"/>
+                        <outlet property="lblNacionalidad" destination="BlE-67-jrS" id="I9V-IF-50G"/>
+                        <outlet property="lblNombreArtistico" destination="7Ru-kl-vcM" id="Fy0-nU-jND"/>
+                        <outlet property="lblNombreReal" destination="RaV-lf-GOw" id="CRd-s5-6rO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7bE-uW-w7q" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2632" y="494"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Album" width="25" height="25"/>
+        <image name="Cantante" width="25" height="25"/>
+    </resources>
+    <color key="tintColor" red="1" green="0.51705831290000004" blue="0.98536628479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

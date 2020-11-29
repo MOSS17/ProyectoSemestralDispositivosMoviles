@@ -15,6 +15,9 @@
 		3D90F120256B0F7600ACEB8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D90F11E256B0F7600ACEB8B /* LaunchScreen.storyboard */; };
 		3D90F12B256B0F7600ACEB8B /* ProyectoSemestralMiguelRube_nTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D90F12A256B0F7600ACEB8B /* ProyectoSemestralMiguelRube_nTests.swift */; };
 		3D90F136256B0F7600ACEB8B /* ProyectoSemestralMiguelRube_nUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D90F135256B0F7600ACEB8B /* ProyectoSemestralMiguelRube_nUITests.swift */; };
+		3DB10CA1256B230E00CB3BB3 /* Álbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB10CA0256B230E00CB3BB3 /* Álbum.swift */; };
+		3DB10CA3256B256D00CB3BB3 /* CeldaAlbumesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB10CA2256B256D00CB3BB3 /* CeldaAlbumesController.swift */; };
+		3DB10CA5256B276700CB3BB3 /* DetallesAlbumesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB10CA4256B276700CB3BB3 /* DetallesAlbumesController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 
 /* Begin PBXFileReference section */
 		3D90F110256B0F6A00ACEB8B /* ProyectoSemestralMiguelRubén.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ProyectoSemestralMiguelRubén.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D90F113256B0F6A00ACEB8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3D90F113256B0F6A00ACEB8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "ProyectoSemestralMiguelRubén/AppDelegate.swift"; sourceTree = SOURCE_ROOT; };
 		3D90F115256B0F6A00ACEB8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3D90F117256B0F6B00ACEB8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3D90F11A256B0F6B00ACEB8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		3D90F131256B0F7600ACEB8B /* ProyectoSemestralMiguelRubénUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ProyectoSemestralMiguelRubénUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D90F135256B0F7600ACEB8B /* ProyectoSemestralMiguelRube_nUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProyectoSemestralMiguelRube_nUITests.swift; sourceTree = "<group>"; };
 		3D90F137256B0F7600ACEB8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DB10CA0256B230E00CB3BB3 /* Álbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Álbum.swift"; sourceTree = "<group>"; };
+		3DB10CA2256B256D00CB3BB3 /* CeldaAlbumesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaAlbumesController.swift; sourceTree = "<group>"; };
+		3DB10CA4256B276700CB3BB3 /* DetallesAlbumesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallesAlbumesController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +105,12 @@
 		3D90F112256B0F6A00ACEB8B /* ProyectoSemestralMiguelRubén */ = {
 			isa = PBXGroup;
 			children = (
-				3D90F113256B0F6A00ACEB8B /* AppDelegate.swift */,
 				3D90F115256B0F6A00ACEB8B /* SceneDelegate.swift */,
-				3D90F117256B0F6B00ACEB8B /* ViewController.swift */,
-				3D90F119256B0F6B00ACEB8B /* Main.storyboard */,
+				3DB10C9F256B22A300CB3BB3 /* Modelos */,
+				3D90F146256B10E100ACEB8B /* ViewControllers */,
+				3D90F144256B109C00ACEB8B /* App */,
+				3D90F143256B106100ACEB8B /* Storyboard */,
 				3D90F11C256B0F7600ACEB8B /* Assets.xcassets */,
-				3D90F11E256B0F7600ACEB8B /* LaunchScreen.storyboard */,
 				3D90F121256B0F7600ACEB8B /* Info.plist */,
 			);
 			path = "ProyectoSemestralMiguelRubén";
@@ -126,6 +132,41 @@
 				3D90F137256B0F7600ACEB8B /* Info.plist */,
 			);
 			path = "ProyectoSemestralMiguelRubénUITests";
+			sourceTree = "<group>";
+		};
+		3D90F143256B106100ACEB8B /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3D90F11E256B0F7600ACEB8B /* LaunchScreen.storyboard */,
+				3D90F119256B0F6B00ACEB8B /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		3D90F144256B109C00ACEB8B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3D90F113256B0F6A00ACEB8B /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3D90F146256B10E100ACEB8B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D90F117256B0F6B00ACEB8B /* ViewController.swift */,
+				3DB10CA2256B256D00CB3BB3 /* CeldaAlbumesController.swift */,
+				3DB10CA4256B276700CB3BB3 /* DetallesAlbumesController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3DB10C9F256B22A300CB3BB3 /* Modelos */ = {
+			isa = PBXGroup;
+			children = (
+				3DB10CA0256B230E00CB3BB3 /* Álbum.swift */,
+			);
+			path = Modelos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +301,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D90F118256B0F6B00ACEB8B /* ViewController.swift in Sources */,
+				3DB10CA1256B230E00CB3BB3 /* Álbum.swift in Sources */,
 				3D90F114256B0F6A00ACEB8B /* AppDelegate.swift in Sources */,
+				3DB10CA5256B276700CB3BB3 /* DetallesAlbumesController.swift in Sources */,
+				3DB10CA3256B256D00CB3BB3 /* CeldaAlbumesController.swift in Sources */,
 				3D90F116256B0F6A00ACEB8B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
